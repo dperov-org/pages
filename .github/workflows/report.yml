@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0    # нужно, чтобы сохранялись все ветки и можно было коммитить в main
+          fetch-depth: 0    # нужно, чтобы сохранялись все ветки и можно было коммитить в publish
 
       # 2) Устанавливаем Python и зависимости
       - name: Setup Python 3.x
@@ -31,9 +31,9 @@ jobs:
       # 3) Запускаем скрипт генерации отчёта
       - name: Generate report (Markdown + images)
         run: |
-          python reports/generate_report.py
+          python reports/generate_reports.py
 
-      # 4) Делаем git-коммит изменений в папку docs/ (если они есть) и пушим обратно в main
+      # 4) Делаем git-коммит изменений в папку docs/ (если они есть) и пушим обратно в publish
       - name: Commit and push docs/
         run: |
           git config user.name "github-actions[bot]"
@@ -43,7 +43,7 @@ jobs:
           git add docs/
           if ! git diff --cached --quiet; then
             git commit -m "📈 Auto-update report: $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push origin HEAD:main
+            git push origin HEAD:publish
           else
             echo "No changes in docs/, skip commit."
           fi
