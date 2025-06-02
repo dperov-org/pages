@@ -26,6 +26,8 @@ jobs:
       - name: Checkout reports repository
         uses: actions/checkout@v4
         with:
+          persist-credentials: true
+          fetch-depth: 0
           repository: dperov-org/ai-bot       # замените your-org/reports-repo на точный owner/name приватного репо
           path: ai-bot                    # куда клонируем (подпапка внутри рабочего каталога)
 #          token: ${{ secrets.PAT }}  # PAT с правом доступа к приватному репо
