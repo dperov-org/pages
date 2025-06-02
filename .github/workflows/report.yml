@@ -28,7 +28,7 @@ jobs:
         with:
           repository: dperov-org/ai-bot       # замените your-org/reports-repo на точный owner/name приватного репо
           path: ai-bot                    # куда клонируем (подпапка внутри рабочего каталога)
-          token: ${{ secrets.PAT }}  # PAT с правом доступа к приватному репо
+#          token: ${{ secrets.PAT }}  # PAT с правом доступа к приватному репо
 
 
       # 2) Устанавливаем Python и зависимости
