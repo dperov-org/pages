@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest # self-hosted # 
+    runs-on: self-hosted # ubuntu-latest # 
 
     steps:
       # 1) Клонируем репо целиком, чтобы появилась папка reports/ и docs/ (от прошлого раза)
@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0    # нужно, чтобы сохранялись все ветки и можно было коммитить в publish
+          persist-credentials: true
 
       # 2) Устанавливаем Python и зависимости
       - name: Setup Python 3.x
