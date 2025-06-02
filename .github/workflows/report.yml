@@ -8,7 +8,7 @@ on:
 
 jobs:
   build_and_deploy:
-    runs-on: self-hosted # ubuntu-latest
+    runs-on: ubuntu-latest # self-hosted # 
 
     steps:
       # 1) Клонируем репо целиком, чтобы появилась папка reports/ и docs/ (от прошлого раза)
