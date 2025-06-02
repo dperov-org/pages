@@ -1,5 +1,9 @@
 name: Report Build and Publish
 
+permissions:
+  contents: write
+
+
 # Запускаем по расписанию: каждый день в 00:00 UTC (можно менять)
 #  schedule:
 #    - cron: '0 0 * * *'
