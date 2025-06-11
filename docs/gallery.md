@@ -35,10 +35,8 @@ title: Галерея Plot
 <body>
   <h1>{{ page.title }}</h1>
   <div class="gallery" id="gallery">
-    {% assign images = site.static_files
-        | where_exp: "file", "file.path contains '/plot/'"
-        | where_exp: "file", "file.path matches '\\.(jpg|jpeg|png|gif)$'"
-    %}
+    {% assign images = site.static_files | where_exp:"file","file.path contains '/plot/'" and 
+      (file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.gif')" %}
     {% for img in images %}
       <div class="gallery-item">
         <a href="{{ site.baseurl }}{{ img.path }}">
