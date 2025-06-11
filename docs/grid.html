@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic AG Grid from JSON</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+  <style>
+    html, body, #myGrid { height: 100%; margin: 0; padding: 0;}
+    #myGrid { height: 600px; width: 95vw; margin: 30px auto;}
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Dynamic AG Grid from data/data.json</h2>
+  <div id="myGrid" class="ag-theme-alpine"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+  <script>
+    // Получаем данные и создаём столбцы автоматически
+    fetch('data/data.json')
+      .then(res => res.json())
+      .then(data => {
+        if (data.length === 0) {
+          document.getElementById('myGrid').innerHTML = "<div style='text-align:center'>Нет данных</div>"; return;
+        }
+
+        // Автоматически определяем столбцы из ключей первого объекта
+        const columnDefs = Object.keys(data[0]).map(key => ({
+          headerName: key,
+          field: key,
+          sortable: true,
+          filter: true
+        }));
+
+        const gridOptions = {
+          columnDefs: columnDefs,
+          rowData: data,
+          domLayout: 'autoHeight'
+        };
+
+        new agGrid.Grid(document.getElementById('myGrid'), gridOptions);
+      })
+      .catch(err => {
+        document.getElementById('myGrid').innerHTML = "<div style='text-align:center;color:red'>Ошибка загрузки или чтения data.json</div>";
+      });
+  </script>
+</body>
+</html>
