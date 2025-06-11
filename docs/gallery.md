@@ -36,22 +36,20 @@ title: Галерея Plot
   <h1>{{ page.title }}</h1>
 
   <div class="gallery" id="gallery">
-    {% assign images = site.static_files | where_exp:"file","file.path contains '/plot/'" and 
-      (file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.gif')" %}
+    {% assign images = site.static_files 
+    | where_exp:"file","file.path contains '/plot/' and file.path matches '\\.(jpg|jpeg|png|gif)$'" %}
     {% for img in images %}
-      {% unless img.path endswith '.json' %}
-        <div class="gallery-item">
-          <a href="{{ site.baseurl }}{{ img.path | remove_first: '/' }}">
-            <img
-                src="{{ site.baseurl }}{{ img.path | remove_first: '/' }}"
-                alt="{{ img.name }}"
-                data-pswp-src="{{ site.baseurl }}{{ img.path | remove_first: '/' }}"
-                data-pswp-filename="{{ img.name }}"
-            >
-          </a>
-          <div class="file-name">{{ img.name }}</div>
-        </div>
-      {% endunless %}
+      <div class="gallery-item">
+        <a href="{{ site.baseurl }}{{ img.path | remove_first: '/' }}">
+          <img
+              src="{{ site.baseurl }}{{ img.path | remove_first: '/' }}"
+              alt="{{ img.name }}"
+              data-pswp-src="{{ site.baseurl }}{{ img.path | remove_first: '/' }}"
+              data-pswp-filename="{{ img.name }}"
+          >
+        </a>
+        <div class="file-name">{{ img.name }}</div>
+      </div>
     {% endfor %}
   </div>
 
