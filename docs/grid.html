@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dynamic AG Grid</title>
+  <title>Dynamic AG Grid with Filters</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
   <style>
@@ -19,8 +19,8 @@
       let isNumber = true, isDate = true;
       for (let r of data) {
         if (!(key in r)) continue;
-        if (typeof r[key] === 'number') continue;
-        if (typeof r[key] === 'string') {
+        if (typeof r[key] === "number") continue;
+        if (typeof r[key] === "string") {
           if (isNaN(Number(r[key]))) isNumber = false;
           if (isNaN(Date.parse(r[key]))) isDate = false;
         } else {
@@ -33,7 +33,7 @@
       return 'agTextColumnFilter';
     }
 
-    fetch('data/data.json')
+    fetch('https://dperov-org.github.io/pages/data/data.json')
       .then(res => res.json())
       .then(data => {
         if (!Array.isArray(data) || data.length === 0) {
@@ -47,10 +47,17 @@
           filter: detectColTypeAndSetFilter(key, data),
           floatingFilter: true
         }));
-        new agGrid.Grid(document.getElementById('myGrid'), { columnDefs, rowData: data, domLayout: 'autoHeight' });
+        const gridOptions = {
+          columnDefs: columnDefs,
+          rowData: data,
+          domLayout: 'autoHeight'
+        };
+        // ВАЖНО: вместо new agGrid.Grid используем agGrid.createGrid!
+        agGrid.createGrid(document.getElementById('myGrid'), gridOptions);
       })
       .catch(err => {
-        document.getElementById('myGrid').innerHTML = "<div style='text-align:center;color:red'>Ошибка загрузки or чтения data.json</div>";
+        document.getElementById('myGrid').innerHTML = "<div style='text-align:center;color:red'>Ошибка загрузки или чтения data.json</div>";
+        console.error(err);
       });
   </script>
 </body>
