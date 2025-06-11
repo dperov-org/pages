@@ -52,7 +52,6 @@ title: Галерея Plot
     {% endfor %}
   </div>
 
-  <!-- PhotoSwipe core -->
   <script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js" type="module"></script>
   <script type="module">
     function loadImgSize(src) {
@@ -65,26 +64,20 @@ title: Галерея Plot
     }
 
     async function enhanceGallery() {
-      const thumbs = document.querySelectorAll('#gallery a img');
-      for (const img of thumbs) {
-        if (!img.dataset.pswpWidth || !img.dataset.pswpHeight) {
+      const anchors = document.querySelectorAll('#gallery a');
+      // Получаем размеры
+      for (const a of anchors) {
+        const img = a.querySelector('img');
+        if (img && (!img.dataset.pswpWidth || !img.dataset.pswpHeight)) {
           const {w, h} = await loadImgSize(img.src);
           img.dataset.pswpWidth = w;
           img.dataset.pswpHeight = h;
+          a.dataset.pswpWidth = w;
+          a.dataset.pswpHeight = h;
         }
       }
+      // PhotoSwipeLightbox автоиспользует data-pswp-width/height
 
-      // А теперь формируем PhotoSwipe-объекты
-      const items = Array.from(thumbs).map(img => ({
-        src: img.dataset.pswpSrc,
-        msrc: img.src,
-        width: Number(img.dataset.pswpWidth),
-        height: Number(img.dataset.pswpHeight),
-        alt: img.alt,
-        filename: img.dataset.pswpFilename
-      }));
-
-      // Инициализация PhotoSwipe с миниатюрами (thumbnails)
       const lightbox = new PhotoSwipeLightbox({
         gallery: '#gallery',
         children: 'a',
@@ -92,15 +85,21 @@ title: Галерея Plot
         showHideAnimationType: 'fade'
       });
 
-      lightbox.on('openingAnimationEnd', () => {
-        // Рендерим панель миниатюр под увеличенным изображением
+      let thumbsBar = null;
+      lightbox.on('afterInit', () => {
         const pswp = lightbox.pswp;
-        let thumbsBar = pswp.element.querySelector('.pswp-thumbs-bar');
-        if (thumbsBar) return;
-
+        if (thumbsBar) thumbsBar.remove();
         thumbsBar = document.createElement('div');
         thumbsBar.className = 'pswp-thumbs-bar';
-        thumbsBar.style.cssText = 'display:flex;gap:6px;overflow-x:auto;padding:8px 0;justify-content:center; background:rgba(255,255,255,0.97); position:absolute; bottom:0; left: 0; right:0; z-index: 1400;';
+        thumbsBar.style.cssText = 'display:flex;gap:6px;overflow-x:auto;padding:8px 0;justify-content:center;background:rgba(255,255,255,0.97);position:absolute;bottom:0;left:0;right:0;z-index:1400;';
+
+        const items = [];
+        document.querySelectorAll('#gallery a img').forEach((imgEl) => {
+          items.push({
+            msrc: imgEl.src,
+            filename: imgEl.alt
+          });
+        });
 
         items.forEach((item, idx) => {
           const thumbImg = document.createElement('img');
@@ -113,19 +112,24 @@ title: Галерея Plot
           thumbImg.style.borderRadius = '3px';
           thumbImg.style.background = '#eee';
           thumbImg.style.marginRight = '3px';
-
           if (pswp.currIndex === idx)
             thumbImg.style.borderColor = '#33f';
-            
+
           thumbImg.onclick = () => pswp.goTo(idx);
 
-          pswp.on('change', () => {
-            // Подсвечивать активный thumbnail
-            thumbsBar.childNodes.forEach((el, i) => el.style.borderColor = i===pswp.currIndex ? '#33f' : '#ccc');
-          });
           thumbsBar.appendChild(thumbImg);
         });
+
         pswp.element.appendChild(thumbsBar);
+
+        pswp.on('change', () => {
+          thumbsBar.childNodes.forEach((el, i) => el.style.borderColor = i===pswp.currIndex ? '#33f' : '#ccc');
+        });
+
+        // Удаляем панели миниатюр при закрытии
+        pswp.on('close', () => {
+          if (thumbsBar) { thumbsBar.remove(); thumbsBar = null; }
+        });
       });
 
       lightbox.init();
