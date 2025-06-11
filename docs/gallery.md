@@ -1,6 +1,6 @@
 ﻿---
 layout: null
-title: Галерея
+title: Галерея на PhotoSwipe v5
 ---
 
 <!DOCTYPE html>
@@ -8,26 +8,21 @@ title: Галерея
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
-  <!-- lightGallery v1 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
   <style>
     .gallery {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin: 20px 0;
+      display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;
     }
     .gallery a img {
-      width: 160px;
-      height: auto;
-      border: 1px solid #ccc;
-      background: #fafafa;
-      display: block;
-      border-radius: 4px;
+      width: 160px; height: auto;
+      border: 1px solid #ccc; border-radius: 4px; background: #fafafa;
     }
   </style>
 </head>
 <body>
   <h1>{{ page.title }}</h1>
-  <div id="lightgallery" class="gallery">
+
+  <div class="gallery" id="gallery">
     {% assign images = site.static_files | where_exp:"file","file.path contains '/plot/'" and (file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.gif')" %}
     {% for img in images %}
       <a href="{{ site.baseurl }}{{ img.path }}">
@@ -35,12 +30,41 @@ title: Галерея
       </a>    
     {% endfor %}
   </div>
-  <!-- lightGallery v1 -->
-  <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js"></script>
-  <script>
-    lightGallery(document.getElementById('lightgallery'), {
-      selector: 'a'
-    });
+
+  <!-- PhotoSwipe Core -->
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js" type="module"></script>
+  <script type="module">
+    // Получение размеров изображений на лету для корректной работы PhotoSwipe
+    function loadImgSize(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve({w: img.naturalWidth, h: img.naturalHeight});
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    async function enhanceGallery() {
+      const links = document.querySelectorAll('#gallery a');
+      for (const a of links) {
+        // Если data-pswp-width не установлен, детектим размер
+        if (!a.dataset.pswpWidth || !a.dataset.pswpHeight) {
+          const size = await loadImgSize(a.href);
+          a.dataset.pswpWidth = size.w;
+          a.dataset.pswpHeight = size.h;
+        }
+      }
+
+      // Теперь инициализируем PhotoSwipe
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
+      });
+      lightbox.init();
+    }
+
+    enhanceGallery();
   </script>
 </body>
 </html>
