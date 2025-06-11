@@ -30,9 +30,9 @@ title: Галерея
   <div id="lightgallery" class="gallery">
     {% assign images = site.static_files | where_exp:"file","file.path contains '/plot/'" and (file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.png' or file.extname == '.gif')" %}
     {% for img in images %}
-      <a href="{{ img.path }}">
-        <img src="{{ img.path }}" alt="image">
-      </a>
+      <a href="{{ site.baseurl }}{{ img.path }}">
+        <img src="{{ site.baseurl }}{{ img.path }}" alt="image">
+      </a>    
     {% endfor %}
   </div>
   <!-- lightGallery v1 -->
