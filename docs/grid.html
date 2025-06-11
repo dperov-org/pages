@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dynamic AG Grid from JSON</title>
+  <title>Dynamic AG Grid</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
   <style>
@@ -11,37 +11,46 @@
   </style>
 </head>
 <body>
-  <h2 style="text-align: center;">Dynamic AG Grid from data/data.json</h2>
+  <h2 style="text-align: center;">Dynamic AG Grid (Auto Filters & Sorting)</h2>
   <div id="myGrid" class="ag-theme-alpine"></div>
-
   <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
   <script>
-    // Получаем данные и создаём столбцы автоматически
+    function detectColTypeAndSetFilter(key, data) {
+      let isNumber = true, isDate = true;
+      for (let r of data) {
+        if (!(key in r)) continue;
+        if (typeof r[key] === 'number') continue;
+        if (typeof r[key] === 'string') {
+          if (isNaN(Number(r[key]))) isNumber = false;
+          if (isNaN(Date.parse(r[key]))) isDate = false;
+        } else {
+          isNumber = false;
+          isDate = false;
+        }
+      }
+      if (isNumber) return 'agNumberColumnFilter';
+      if (isDate) return 'agDateColumnFilter';
+      return 'agTextColumnFilter';
+    }
+
     fetch('data/data.json')
       .then(res => res.json())
       .then(data => {
-        if (data.length === 0) {
-          document.getElementById('myGrid').innerHTML = "<div style='text-align:center'>Нет данных</div>"; return;
+        if (!Array.isArray(data) || data.length === 0) {
+          document.getElementById('myGrid').innerHTML = "<div style='text-align:center'>Нет данных</div>";
+          return;
         }
-
-        // Автоматически определяем столбцы из ключей первого объекта
         const columnDefs = Object.keys(data[0]).map(key => ({
           headerName: key,
           field: key,
           sortable: true,
-          filter: true
+          filter: detectColTypeAndSetFilter(key, data),
+          floatingFilter: true
         }));
-
-        const gridOptions = {
-          columnDefs: columnDefs,
-          rowData: data,
-          domLayout: 'autoHeight'
-        };
-
-        new agGrid.Grid(document.getElementById('myGrid'), gridOptions);
+        new agGrid.Grid(document.getElementById('myGrid'), { columnDefs, rowData: data, domLayout: 'autoHeight' });
       })
       .catch(err => {
-        document.getElementById('myGrid').innerHTML = "<div style='text-align:center;color:red'>Ошибка загрузки или чтения data.json</div>";
+        document.getElementById('myGrid').innerHTML = "<div style='text-align:center;color:red'>Ошибка загрузки or чтения data.json</div>";
       });
   </script>
 </body>
