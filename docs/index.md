@@ -1,49 +1,56 @@
-** Дата: 12.06.2025 9:22
+** Дата: 13.06.2025 3:48
 
-As of June 12, 2025, at 13:22 UTC, the cryptocurrency market is experiencing a general downturn, with major coins showing declines over the past 24 hours.
+As of June 13, 2025, at 03:48 AM UTC, the cryptocurrency market is experiencing a notable downturn, with major coins exhibiting significant declines over the past 24 hours.
 
 **Current Market Overview:**
 
-- **Bitcoin (BTC):** Trading at $107,644, down 1.74% from the previous close. Intraday high of $110,277 and low of $107,491.
-- **Ethereum (ETH):** Priced at $2,754.54, a decrease of 0.53%. Intraday high of $2,871.30 and low of $2,737.95.
-- **BNB (BNB):** At $667.78, down 0.56%. Intraday high of $672.24 and low of $662.66.
-- **XRP (XRP):** Trading at $2.25, a decline of 3.02%. Intraday high of $2.33 and low of $2.24.
-- **Cardano (ADA):** Priced at $0.685754, down 4.73%. Intraday high of $0.72893 and low of $0.683654.
-- **Dogecoin (DOGE):** At $0.189964, a decrease of 5.82%. Intraday high of $0.203435 and low of $0.189169.
-- **Solana (SOL):** Trading at $159.52, down 4.34%. Intraday high of $168.33 and low of $158.62.
-- **Polkadot (DOT):** Priced at $4.06, a decline of 5.36%. Intraday high of $4.34 and low of $4.02.
-- **Litecoin (LTC):** At $89.85, down 2.10%. Intraday high of $94.00 and low of $89.28.
-- **Chainlink (LINK):** Trading at $14.43, a decrease of 5.56%. Intraday high of $15.63 and low of $14.40.
-- **Bitcoin Cash (BCH):** Priced at $432.73, down 2.13%. Intraday high of $445.16 and low of $423.05.
+- **Bitcoin (BTC):** Trading at $104,243, down 3.46% from the previous close.
+- **Ethereum (ETH):** Trading at $2,503.39, down 9.47%.
+- **BNB (BNB):** Trading at $646.32, down 3.07%.
+- **XRP (XRP):** Trading at $2.12, down 5.78%.
+- **Cardano (ADA):** Trading at $0.6319, down 8.78%.
+- **Dogecoin (DOGE):** Trading at $0.1741, down 9.02%.
+- **Solana (SOL):** Trading at $143.98, down 10.16%.
+- **Polkadot (DOT):** Trading at $3.77, down 9.16%.
+- **Polygon (MATIC):** Trading at $0.1992, down 12.40%.
+- **Litecoin (LTC):** Trading at $83.00, down 8.64%.
 
-**Overall Short-Term Trading Recommendations:**
+These figures indicate a broad market correction, with all top 10 cryptocurrencies by market capitalization experiencing declines.
 
-Given the current market downturn, a cautious approach is advisable. Short-term traders might consider capitalizing on potential rebounds in oversold assets or shorting assets showing continued weakness. Implementing strict risk management strategies, including tight stop-loss orders, is essential in this volatile environment.
+**Short-Term Trading Recommendations:**
 
-**Specific Intraday Trading Ideas:**
+Given the current market volatility and downward trend, a cautious approach is advisable. Short-term traders might consider the following strategies:
+
+1. **Avoid Long Positions:** Entering buy positions during a market downturn can be risky.
+2. **Consider Short Positions:** For experienced traders, shorting certain assets may be profitable, but this carries high risk.
+3. **Monitor for Reversal Signals:** Look for signs of market stabilization or reversal before making significant trades.
+
+**Specific Short-Term Trading Ideas:**
+
+Based on the current market conditions, here are three intraday trading ideas:
 
 1. **Coin (Ticker):** Ethereum (ETH)
-   - **Direction:** Buy
-   - **Entry Price:** $2,754.54 (Source: Real-time data as of June 12, 2025, 13:22 UTC)
-   - **Stop-Loss:** $2,727.99 (0.96% below entry)
-   - **Take-Profit:** $2,810.63 (2.04% above entry)
-
-2. **Coin (Ticker):** Dogecoin (DOGE)
    - **Direction:** Sell
-   - **Entry Price:** $0.189964 (Source: Real-time data as of June 12, 2025, 13:22 UTC)
-   - **Stop-Loss:** $0.191864 (1% above entry)
-   - **Take-Profit:** $0.187064 (1.53% below entry)
+   - **Entry Price:** $2,503.39 (Source: Real-time data as of June 13, 2025, 03:48 AM UTC)
+   - **Stop-Loss:** $2,528.42 (1% above entry price)
+   - **Take-Profit:** $2,478.36 (1% below entry price)
 
-3. **Coin (Ticker):** Solana (SOL)
-   - **Direction:** Buy
-   - **Entry Price:** $159.52 (Source: Real-time data as of June 12, 2025, 13:22 UTC)
-   - **Stop-Loss:** $157.92 (1% below entry)
-   - **Take-Profit:** $162.71 (2% above entry)
+2. **Coin (Ticker):** Solana (SOL)
+   - **Direction:** Sell
+   - **Entry Price:** $143.98 (Source: Real-time data as of June 13, 2025, 03:48 AM UTC)
+   - **Stop-Loss:** $145.42 (1% above entry price)
+   - **Take-Profit:** $142.54 (1% below entry price)
+
+3. **Coin (Ticker):** Cardano (ADA)
+   - **Direction:** Sell
+   - **Entry Price:** $0.6319 (Source: Real-time data as of June 13, 2025, 03:48 AM UTC)
+   - **Stop-Loss:** $0.6382 (1% above entry price)
+   - **Take-Profit:** $0.6256 (1% below entry price)
 
 **Sources Used:**
 
-- Real-time cryptocurrency price data as of June 12, 2025, 13:22 UTC.
+- Real-time cryptocurrency price data as of June 13, 2025, 03:48 AM UTC.
 
-*Please note that cryptocurrency markets are highly volatile. It's crucial to conduct your own research and consider your risk tolerance before engaging in trading activities.* 
+*Note: Cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider your risk tolerance before engaging in trading activities.* 
 [Report](https://dperov-org.github.io/pages/index.html)
 [Charts](https://dperov-org.github.io/pages/plot.html)
