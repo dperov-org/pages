@@ -1,50 +1,48 @@
-** Дата: 15.06.2025 9:20
+** Дата: 16.06.2025 3:52
 
-As of June 15, 2025, at 13:20 UTC, the cryptocurrency market is experiencing a slight downturn, with major coins showing minor declines over the past 24 hours.
+As of June 16, 2025, at 03:52:26 AM UTC, the cryptocurrency market is experiencing moderate volatility, with major coins showing slight gains or losses over the past 24 hours.
 
 **Current Market Overview:**
 
-- **Bitcoin (BTC):** Trading at $104,997, down 0.087% from the previous close.
-- **Ethereum (ETH):** Trading at $2,515.56, down 0.653%.
-- **BNB (BNB):** Trading at $647.39, down 0.451%.
-- **XRP (XRP):** Trading at $2.15, down 0.922%.
-- **Cardano (ADA):** Trading at $0.62515, down 1.531%.
-- **Dogecoin (DOGE):** Trading at $0.174468, down 1.317%.
-- **Solana (SOL):** Trading at $144.87, down 0.570%.
-- **Polkadot (DOT):** Trading at $3.76, down 1.053%.
-- **Litecoin (LTC):** Trading at $85.28, down 1.592%.
-- **Chainlink (LINK):** Trading at $13.08, down 0.532%.
+- **Bitcoin (BTC):** Trading at $105,867, up 0.30% from the previous close.
+- **Ethereum (ETH):** Trading at $2,570.15, up 1.48% from the previous close.
+- **BNB (BNB):** Trading at $651.65, up 0.57% from the previous close.
+- **XRP (XRP):** Trading at $2.17, up 0.93% from the previous close.
+- **Cardano (ADA):** Trading at $0.63733, up 1.41% from the previous close.
+- **Dogecoin (DOGE):** Trading at $0.176313, down 0.86% from the previous close.
+- **Solana (SOL):** Trading at $155.91, up 6.76% from the previous close.
+- **Polkadot (DOT):** Trading at $3.84, up 1.32% from the previous close.
+- **Polygon (MATIC):** Trading at $0.200212, up 0.21% from the previous close.
+- **Litecoin (LTC):** Trading at $86.58, up 0.83% from the previous close.
 
-*Source: Real-time data from major exchanges as of June 15, 2025, 13:20 UTC.*
+**Short-Term Trading Recommendations:**
 
-**Overall Short-Term Trading Recommendations:**
+Given the current market conditions, a cautious approach is advisable for short-term trading. Focus on coins exhibiting clear trends and sufficient liquidity.
 
-Given the current market conditions, characterized by minor declines across major cryptocurrencies, a cautious approach is advisable for short-term trading. Traders should consider setting tight stop-loss orders to mitigate potential losses and focus on coins exhibiting relative strength or clear technical patterns.
+**Intraday Trading Ideas:**
 
-**Specific Short-Term Trading Ideas:**
-
-1. **Coin (Ticker):** Ethereum (ETH)
+1. **Coin:** Solana (SOL)
    - **Direction:** Buy
-   - **Entry Price:** $2,515.56 (Source: Real-time data from major exchanges as of June 15, 2025, 13:20 UTC)
-   - **Stop-Loss:** $2,490.40 (1% below entry price)
-   - **Take-Profit:** $2,540.72 (1% above entry price)
+   - **Entry Price:** $155.91 (Source: Real-time data, June 16, 2025, 03:52:26 AM UTC)
+   - **Stop-Loss:** $154.35 (1% below entry price)
+   - **Take-Profit:** $157.47 (1% above entry price)
 
-2. **Coin (Ticker):** Solana (SOL)
+2. **Coin:** Ethereum (ETH)
    - **Direction:** Buy
-   - **Entry Price:** $144.87 (Source: Real-time data from major exchanges as of June 15, 2025, 13:20 UTC)
-   - **Stop-Loss:** $143.42 (1% below entry price)
-   - **Take-Profit:** $146.32 (1% above entry price)
+   - **Entry Price:** $2,570.15 (Source: Real-time data, June 16, 2025, 03:52:26 AM UTC)
+   - **Stop-Loss:** $2,544.45 (1% below entry price)
+   - **Take-Profit:** $2,595.85 (1% above entry price)
 
-3. **Coin (Ticker):** Chainlink (LINK)
+3. **Coin:** Cardano (ADA)
    - **Direction:** Buy
-   - **Entry Price:** $13.08 (Source: Real-time data from major exchanges as of June 15, 2025, 13:20 UTC)
-   - **Stop-Loss:** $12.95 (1% below entry price)
-   - **Take-Profit:** $13.21 (1% above entry price)
+   - **Entry Price:** $0.63733 (Source: Real-time data, June 16, 2025, 03:52:26 AM UTC)
+   - **Stop-Loss:** $0.63196 (1% below entry price)
+   - **Take-Profit:** $0.64270 (1% above entry price)
 
 **Sources Used:**
 
-- Real-time cryptocurrency price data from major exchanges as of June 15, 2025, 13:20 UTC.
+- Real-time cryptocurrency price data as of June 16, 2025, 03:52:26 AM UTC.
 
-*Note: Cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider your risk tolerance before engaging in trading activities.* 
+*Please note that cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider your risk tolerance before engaging in trading activities.* 
 [Report](https://dperov-org.github.io/pages/index.html)
 [Charts](https://dperov-org.github.io/pages/plot.html)
