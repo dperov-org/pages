@@ -42,7 +42,6 @@ title: Галерея изображений
 ![TOSHIUSDT.png](plot/TOSHIUSDT.png)
 ![TRUMPUSDT.png](plot/TRUMPUSDT.png)
 ![TRXUSDT.png](plot/TRXUSDT.png)
-![USDEUSDT.png](plot/USDEUSDT.png)
 ![VIRTUALUSDT.png](plot/VIRTUALUSDT.png)
 ![WALUSDT.png](plot/WALUSDT.png)
 ![WCTUSDT.png](plot/WCTUSDT.png)

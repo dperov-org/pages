@@ -16,7 +16,8 @@
   <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
   <script>
     // Задаём фиксированный список колонок для вывода:
-    const columnsToShow = ["symbol", 'volume_24h', 'max_price_change_24h_pc', 'price_change_24h', 'price_change_4h', 'price_change_1h', "ATR_pc", "BB_signal", "signal_ma_cross", "signal_level", 'fast_der_sm_norm']; // <-- Замените на ваши ключи
+    const columnsToShow = ["symbol", 'volume_24h', 'max_price_change_24h_pc', 'price_change_24h', 'price_change_4h', 'price_change_1h', 
+    "ATR_pc", "BB_signal", "signal_ma_cross", "signal_level", 'fast_der_sm_norm']; // <-- Замените на ваши ключи
 
     function detectColTypeAndSetFilter(key, data) {
       let isNumber = true, isDate = true;
