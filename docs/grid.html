@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dynamic AG Grid with Filters</title>
+  <title>Dynamic AG Grid with Fixed Columns</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
   <style>
@@ -11,10 +11,13 @@
   </style>
 </head>
 <body>
-  <h2 style="text-align: center;">Dynamic AG Grid (Auto Filters & Sorting)</h2>
+  <h2 style="text-align: center;">AG Grid: Только определённые колонки</h2>
   <div id="myGrid" class="ag-theme-alpine"></div>
   <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
   <script>
+    // Задаём фиксированный список колонок для вывода:
+    const columnsToShow = ["symbol", 'volume_24h', 'max_price_change_24h_pc', 'price_change_24h', 'price_change_4h', 'price_change_1h', "ATR_pc", "BB_signal", "signal_ma_cross", "signal_level", 'fast_der_sm_norm']; // <-- Замените на ваши ключи
+
     function detectColTypeAndSetFilter(key, data) {
       let isNumber = true, isDate = true;
       for (let r of data) {
@@ -40,19 +43,40 @@
           document.getElementById('myGrid').innerHTML = "<div style='text-align:center'>Нет данных</div>";
           return;
         }
-        const columnDefs = Object.keys(data[0]).map(key => ({
-          headerName: key,
-          field: key,
+
+        // Формируем только нужные колонки. Первая колонка закрепляется.
+        const columnDefs = columnsToShow.map((col, idx) => ({
+          headerName: col,
+          field: col,
           sortable: true,
-          filter: detectColTypeAndSetFilter(key, data),
-          floatingFilter: true
+          filter: detectColTypeAndSetFilter(col, data),
+          floatingFilter: true,
+          pinned: idx === 0 ? 'left' : null
         }));
+
+        // Добавляем последнюю колонку "Link"
+        columnDefs.push({
+          headerName: 'Link',
+          field: 'generatedLink',
+          sortable: false,
+          filter: false,
+          cellRenderer: (params) => {
+            // Имя первой колонки в вашем массиве
+            const firstKey = columnsToShow[0];
+            const value = params.data[firstKey];
+            // Формируем ссылку по вашему шаблону ниже:
+            // https://dperov-org.github.io/pages/plot/BNBUSDT.png
+            const href = `https://dperov-org.github.io/pages/plot/${value}.png`;
+            return `<a href="${href}" target="_blank">Открыть</a>`;
+          }
+        });
+
         const gridOptions = {
           columnDefs: columnDefs,
           rowData: data,
-          domLayout: 'autoHeight'
+          // domLayout: 'autoHeight' // НЕ нужно!
         };
-        // ВАЖНО: вместо new agGrid.Grid используем agGrid.createGrid!
+
         agGrid.createGrid(document.getElementById('myGrid'), gridOptions);
       })
       .catch(err => {
