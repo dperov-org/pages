@@ -17,7 +17,7 @@
   <script>
     // Задаём фиксированный список колонок для вывода:
     const columnsToShow = ["symbol", 'volume_24h', 'max_price_change_24h_pc', 'price_change_24h', 'price_change_4h', 'price_change_1h', 
-    "ATR_pc", "BB_signal", "signal_ma_cross", "signal_level", 'fast_der_sm_norm']; // <-- Замените на ваши ключи
+    "ATR_pc", "BB_signal", "signal_ma_cross", "signal_level", 'signal_level_change', 'fast_der_sm_norm']; // <-- Замените на ваши ключи
 
     function detectColTypeAndSetFilter(key, data) {
       let isNumber = true, isDate = true;
@@ -38,11 +38,24 @@
     }
 
     fetch('https://dperov-org.github.io/pages/data/data.json')
-      .then(res => res.json())
-      .then(data => {
+      .then(res => {
+          // Читаем Last-Modified
+          const lastModified = res.headers.get('Last-Modified');
+          // Запускаем чтение JSON параллельно
+          return res.json().then(data => ({ data, lastModified }));
+      })
+      .then(({ data, lastModified }) => {
         if (!Array.isArray(data) || data.length === 0) {
           document.getElementById('myGrid').innerHTML = "<div style='text-align:center'>Нет данных</div>";
           return;
+        }
+
+        // Форматируем Last-Modified по вашему вкусу (пример: DD.MM.YYYY HH:mm)
+        let dateStr = lastModified ? new Date(lastModified).toLocaleString() : '';
+        // Вставляем дату в заголовок таблицы
+        if (dateStr) {
+          document.getElementById('h2-grid-title').textContent =
+            `Grid (Актуальность данных: ${dateStr})`;
         }
 
         // Формируем только нужные колонки. Первая колонка закрепляется.
