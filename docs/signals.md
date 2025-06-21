@@ -4,12 +4,11 @@ title: "Моя таблица"
 
 # 🚦 Торговые сигналы
 
-Актуальные сигналы на рынке (UTC: `2025-06-21 04:18`)
+Актуальные сигналы на рынке (UTC: `2025-06-21 06:18`)
 
-| symbol     | name        |   price |     tp |     sl | time                      | url                                                                  |
-|:-----------|:------------|--------:|-------:|-------:|:--------------------------|:---------------------------------------------------------------------|
-| MNTUSDT    | On High     |    0.63 |   0    |   0    | 2025-06-21 04:10:00+00:00 | [MNTUSDT](https://dperov-org.github.io/pages/plot/MNTUSDT.png)       |
-| HAEDALUSDT | On Low      |    0.12 |   0    |   0    | 2025-06-21 04:10:00+00:00 | [HAEDALUSDT](https://dperov-org.github.io/pages/plot/HAEDALUSDT.png) |
-| EPTUSDT    | Low->Lower  |    0    |   0.01 |   0.01 | 2025-06-21 04:10:00+00:00 | [EPTUSDT](https://dperov-org.github.io/pages/plot/EPTUSDT.png)       |
-| TONUSDT    | Low->Lower  |    2.92 |   2.88 |   2.92 | 2025-06-21 04:10:00+00:00 | [TONUSDT](https://dperov-org.github.io/pages/plot/TONUSDT.png)       |
-| BNBUSDT    | Center->Low |  643.5  | 641.37 | 644.37 | 2025-06-21 04:10:00+00:00 | [BNBUSDT](https://dperov-org.github.io/pages/plot/BNBUSDT.png)       |
+| symbol     | name        |   price |   tp |   sl | time                      | url                                                                  |
+|:-----------|:------------|--------:|-----:|-----:|:--------------------------|:---------------------------------------------------------------------|
+| POPCATUSDT | On Center   |    0.28 | 0    | 0    | 2025-06-21 06:10:00+00:00 | [POPCATUSDT](https://dperov-org.github.io/pages/plot/POPCATUSDT.png) |
+| AVAXUSDT   | On Center   |   17.56 | 0    | 0    | 2025-06-21 06:10:00+00:00 | [AVAXUSDT](https://dperov-org.github.io/pages/plot/AVAXUSDT.png)     |
+| WALUSDT    | Low->Center |    0.42 | 0.43 | 0.42 | 2025-06-21 06:10:00+00:00 | [WALUSDT](https://dperov-org.github.io/pages/plot/WALUSDT.png)       |
+| HAEDALUSDT | Low->Lower  |    0.12 | 0.11 | 0.12 | 2025-06-21 06:10:00+00:00 | [HAEDALUSDT](https://dperov-org.github.io/pages/plot/HAEDALUSDT.png) |
