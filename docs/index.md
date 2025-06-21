@@ -1,50 +1,51 @@
-** Дата: 21.06.2025 3:45
+** Дата: 21.06.2025 9:20
 
-As of June 21, 2025, at 03:45 AM UTC, the cryptocurrency market is experiencing a slight downturn, with major coins showing minor declines over the past 24 hours.
+As of June 21, 2025, at 09:20 AM UTC, the cryptocurrency market is experiencing a slight downturn, with major coins showing modest declines.
 
 **Current Market Overview:**
 
-- **Bitcoin (BTC):** Trading at $103,629, down 0.98% from the previous close.
-- **Ethereum (ETH):** Trading at $2,428.69, down 3.62% from the previous close.
-- **BNB (BNB):** Trading at $644.51, down 0.02% from the previous close.
-- **XRP (XRP):** Trading at $2.13, down 1.39% from the previous close.
-- **Cardano (ADA):** Trading at $0.585935, down 2.15% from the previous close.
-- **Dogecoin (DOGE):** Trading at $0.163601, down 3.45% from the previous close.
-- **Solana (SOL):** Trading at $141.09, down 3.15% from the previous close.
-- **Polkadot (DOT):** Trading at $3.46, down 1.71% from the previous close.
-- **Polygon (MATIC):** Trading at $0.185124, down 1.68% from the previous close.
-- **Litecoin (LTC):** Trading at $83.61, down 1.67% from the previous close.
+- **Bitcoin (BTC):** Trading at $103,744, down 2.06% from the previous close.
+- **Ethereum (ETH):** Trading at $2,435.78, down 4.56% from the previous close.
+- **BNB (BNB):** Trading at $640.63, down 1.35% from the previous close.
+- **XRP (XRP):** Trading at $2.14, down 1.38% from the previous close.
+- **Cardano (ADA):** Trading at $0.5857, down 2.67% from the previous close.
+- **Dogecoin (DOGE):** Trading at $0.1636, down 3.94% from the previous close.
+- **Solana (SOL):** Trading at $141.21, down 4.28% from the previous close.
+- **Polkadot (DOT):** Trading at $3.50, down 1.13% from the previous close.
+- **Litecoin (LTC):** Trading at $83.25, down 2.72% from the previous close.
+- **Chainlink (LINK):** Trading at $12.67, down 3.72% from the previous close.
+- **Bitcoin Cash (BCH):** Trading at $466.94, down 5.15% from the previous close.
 
-*Source: Real-time data as of June 21, 2025, 03:45 AM UTC.*
+**Short-Term Trading Recommendations:**
 
-**Overall Short-Term Trading Recommendations:**
+Given the current market conditions, a cautious approach is advisable. Short-term traders should consider setting tight stop-loss orders to mitigate potential losses. Monitoring market sentiment and news closely is essential, as the market may experience increased volatility.
 
-Given the current market conditions, a cautious approach is advisable for short-term trading. The slight declines across major cryptocurrencies suggest potential for short-term rebounds, but the overall market sentiment appears bearish. Traders should consider setting tight stop-loss orders to mitigate risks and focus on coins with higher liquidity for better trade execution.
+**Intraday Trading Ideas:**
 
-**Specific Short-Term Trading Ideas:**
+Based on the current market data, here are three intraday trading ideas:
 
 1. **Coin (Ticker):** Bitcoin (BTC)
-   - **Direction:** Buy
-   - **Entry Price:** $103,629 (Source: Real-time data as of June 21, 2025, 03:45 AM UTC)
-   - **Stop-Loss:** $102,593 (1% below entry price)
-   - **Take-Profit:** $104,665 (1% above entry price)
+   - **Direction:** Sell
+   - **Entry Price:** $103,744 (Source: Real-time market data as of June 21, 2025, 09:20 AM UTC)
+   - **Stop-Loss:** $104,781 (1% above entry price)
+   - **Take-Profit:** $102,707 (1% below entry price)
 
 2. **Coin (Ticker):** Ethereum (ETH)
-   - **Direction:** Buy
-   - **Entry Price:** $2,428.69 (Source: Real-time data as of June 21, 2025, 03:45 AM UTC)
-   - **Stop-Loss:** $2,404.40 (1% below entry price)
-   - **Take-Profit:** $2,453.98 (1% above entry price)
+   - **Direction:** Sell
+   - **Entry Price:** $2,435.78 (Source: Real-time market data as of June 21, 2025, 09:20 AM UTC)
+   - **Stop-Loss:** $2,460.14 (1% above entry price)
+   - **Take-Profit:** $2,411.42 (1% below entry price)
 
 3. **Coin (Ticker):** Solana (SOL)
-   - **Direction:** Buy
-   - **Entry Price:** $141.09 (Source: Real-time data as of June 21, 2025, 03:45 AM UTC)
-   - **Stop-Loss:** $139.68 (1% below entry price)
-   - **Take-Profit:** $142.50 (1% above entry price)
+   - **Direction:** Sell
+   - **Entry Price:** $141.21 (Source: Real-time market data as of June 21, 2025, 09:20 AM UTC)
+   - **Stop-Loss:** $142.62 (1% above entry price)
+   - **Take-Profit:** $139.80 (1% below entry price)
 
 **Sources Used:**
 
-- Real-time cryptocurrency market data as of June 21, 2025, 03:45 AM UTC.
+- Real-time market data as of June 21, 2025, 09:20 AM UTC.
 
-*Please note that cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider your risk tolerance before engaging in trading activities.* 
+*Please note that cryptocurrency markets are highly volatile. It's crucial to conduct your own research and consider your risk tolerance before engaging in trading activities.* 
 [Report](https://dperov-org.github.io/pages/index.html)
 [Charts](https://dperov-org.github.io/pages/plot.html)
