@@ -4,28 +4,18 @@ title: "Моя таблица"
 
 # 🚦 Торговые сигналы
 
-Актуальные сигналы на рынке (UTC: `2025-06-21 16:16`)
+Актуальные сигналы на рынке (UTC: `2025-06-21 18:17`)
 
-| symbol      | name        |   price |      tp |      sl | time                      | url                                                                    |
-|:------------|:------------|--------:|--------:|--------:|:--------------------------|:-----------------------------------------------------------------------|
-| MNTUSDT     | On Low      |    0.63 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [MNTUSDT](https://dperov-org.github.io/pages/plot/MNTUSDT.png)         |
-| DOGEUSDT    | On Low      |    0.16 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [DOGEUSDT](https://dperov-org.github.io/pages/plot/DOGEUSDT.png)       |
-| PEPEUSDT    | On Low      |    0    |    0    |    0    | 2025-06-21 16:05:00+00:00 | [PEPEUSDT](https://dperov-org.github.io/pages/plot/PEPEUSDT.png)       |
-| WIFUSDT     | On Low      |    0.72 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [WIFUSDT](https://dperov-org.github.io/pages/plot/WIFUSDT.png)         |
-| ENAUSDT     | On Low      |    0.26 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [ENAUSDT](https://dperov-org.github.io/pages/plot/ENAUSDT.png)         |
-| TRXUSDT     | On Center   |    0.27 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [TRXUSDT](https://dperov-org.github.io/pages/plot/TRXUSDT.png)         |
-| LTCUSDT     | On Center   |   82.79 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [LTCUSDT](https://dperov-org.github.io/pages/plot/LTCUSDT.png)         |
-| LINKUSDT    | On Low      |   12.47 |    0    |    0    | 2025-06-21 16:05:00+00:00 | [LINKUSDT](https://dperov-org.github.io/pages/plot/LINKUSDT.png)       |
-| AVAXUSDT    | On Low      |   17.11 |    0    |    0    | 2025-06-21 16:10:00+00:00 | [AVAXUSDT](https://dperov-org.github.io/pages/plot/AVAXUSDT.png)       |
-| SHIBUSDT    | On Low      |    0    |    0    |    0    | 2025-06-21 16:10:00+00:00 | [SHIBUSDT](https://dperov-org.github.io/pages/plot/SHIBUSDT.png)       |
-| WCTUSDT     | On High     |    0.35 |    0    |    0    | 2025-06-21 16:10:00+00:00 | [WCTUSDT](https://dperov-org.github.io/pages/plot/WCTUSDT.png)         |
-| XLMUSDT     | Low->Center |    0.24 |    0.24 |    0.24 | 2025-06-21 16:10:00+00:00 | [XLMUSDT](https://dperov-org.github.io/pages/plot/XLMUSDT.png)         |
-| NEARUSDT    | Low->Center |    2.04 |    2.07 |    2.04 | 2025-06-21 16:10:00+00:00 | [NEARUSDT](https://dperov-org.github.io/pages/plot/NEARUSDT.png)       |
-| ETHUSDT     | Center->Low | 2421.07 | 2397.97 | 2426.2  | 2025-06-21 16:05:00+00:00 | [ETHUSDT](https://dperov-org.github.io/pages/plot/ETHUSDT.png)         |
-| ADAUSDT     | Center->Low |    0.57 |    0.57 |    0.58 | 2025-06-21 16:05:00+00:00 | [ADAUSDT](https://dperov-org.github.io/pages/plot/ADAUSDT.png)         |
-| VIRTUALUSDT | Low->Lower  |    1.44 |    1.34 |    1.44 | 2025-06-21 16:05:00+00:00 | [VIRTUALUSDT](https://dperov-org.github.io/pages/plot/VIRTUALUSDT.png) |
-| POPCATUSDT  | Low->Lower  |    0.26 |    0.27 |    0.27 | 2025-06-21 16:05:00+00:00 | [POPCATUSDT](https://dperov-org.github.io/pages/plot/POPCATUSDT.png)   |
-| ONDOUSDT    | Low->Lower  |    0.73 |    0.72 |    0.73 | 2025-06-21 16:05:00+00:00 | [ONDOUSDT](https://dperov-org.github.io/pages/plot/ONDOUSDT.png)       |
-| KASUSDT     | Low->Lower  |    0.07 |    0.07 |    0.07 | 2025-06-21 16:05:00+00:00 | [KASUSDT](https://dperov-org.github.io/pages/plot/KASUSDT.png)         |
-| PNUTUSDT    | Low->Lower  |    0.21 |    0.2  |    0.21 | 2025-06-21 16:05:00+00:00 | [PNUTUSDT](https://dperov-org.github.io/pages/plot/PNUTUSDT.png)       |
-| INITUSDT    | Low->Lower  |    0.44 |    0.44 |    0.45 | 2025-06-21 16:05:00+00:00 | [INITUSDT](https://dperov-org.github.io/pages/plot/INITUSDT.png)       |
+| symbol    | name         |   price |   tp |   sl | time                      | url                                                                |
+|:----------|:-------------|--------:|-----:|-----:|:--------------------------|:-------------------------------------------------------------------|
+| XRPUSDT   | On Low       |    2.1  | 0    | 0    | 2025-06-21 18:10:00+00:00 | [XRPUSDT](https://dperov-org.github.io/pages/plot/XRPUSDT.png)     |
+| SOLUSDT   | On Low       |  139.08 | 0    | 0    | 2025-06-21 18:10:00+00:00 | [SOLUSDT](https://dperov-org.github.io/pages/plot/SOLUSDT.png)     |
+| TRUMPUSDT | On Low       |    9.02 | 0    | 0    | 2025-06-21 18:10:00+00:00 | [TRUMPUSDT](https://dperov-org.github.io/pages/plot/TRUMPUSDT.png) |
+| ONDOUSDT  | On Low       |    0.72 | 0    | 0    | 2025-06-21 18:10:00+00:00 | [ONDOUSDT](https://dperov-org.github.io/pages/plot/ONDOUSDT.png)   |
+| LINKUSDT  | On Low       |   12.44 | 0    | 0    | 2025-06-21 18:10:00+00:00 | [LINKUSDT](https://dperov-org.github.io/pages/plot/LINKUSDT.png)   |
+| TONUSDT   | On Low       |    2.9  | 0    | 0    | 2025-06-21 18:10:00+00:00 | [TONUSDT](https://dperov-org.github.io/pages/plot/TONUSDT.png)     |
+| DEGENUSDT | Low->Lower   |    0    | 0    | 0    | 2025-06-21 18:10:00+00:00 | [DEGENUSDT](https://dperov-org.github.io/pages/plot/DEGENUSDT.png) |
+| SHIBUSDT  | Low->Lower   |    0    | 0    | 0    | 2025-06-21 18:10:00+00:00 | [SHIBUSDT](https://dperov-org.github.io/pages/plot/SHIBUSDT.png)   |
+| WCTUSDT   | High->Center |    0.34 | 0.34 | 0.35 | 2025-06-21 18:10:00+00:00 | [WCTUSDT](https://dperov-org.github.io/pages/plot/WCTUSDT.png)     |
+| TOSHIUSDT | Low->Lower   |    0    | 0    | 0    | 2025-06-21 18:10:00+00:00 | [TOSHIUSDT](https://dperov-org.github.io/pages/plot/TOSHIUSDT.png) |
+| SUSDT     | Low->Lower   |    0.27 | 0.26 | 0.27 | 2025-06-21 18:10:00+00:00 | [SUSDT](https://dperov-org.github.io/pages/plot/SUSDT.png)         |
