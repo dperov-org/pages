@@ -1,53 +1,48 @@
-** Дата: 11.07.2025 9:24
+** Дата: 12.07.2025 3:54
 
-As of July 11, 2025, the cryptocurrency market is experiencing significant bullish momentum, with major coins reaching new all-time highs.
+As of July 12, 2025, at 03:53:49 AM UTC, the cryptocurrency market exhibits the following key metrics:
 
-**Current Market Overview:**
+- **Bitcoin (BTC):** Trading at $117,734, reflecting a 0.87% increase from the previous close.
+- **Ethereum (ETH):** Priced at $2,963.57, down 0.19% from the previous close.
+- **BNB (BNB):** At $694.90, up 0.72% from the previous close.
+- **XRP (XRP):** Trading at $2.80, an 8.95% increase from the previous close.
+- **Cardano (ADA):** Priced at $0.7283, up 6.06% from the previous close.
+- **Dogecoin (DOGE):** At $0.2038, a 2.94% increase from the previous close.
+- **Solana (SOL):** Trading at $163.11, down 1.06% from the previous close.
+- **Polkadot (DOT):** Priced at $3.99, up 1.79% from the previous close.
+- **Polygon (MATIC):** At $0.2324, a 3.31% increase from the previous close.
+- **Litecoin (LTC):** Trading at $94.84, down 0.59% from the previous close.
 
-- **Bitcoin (BTC):** Trading at $118,144, up 6.25% from the previous close.
-- **Ethereum (ETH):** Trading at $3,011.32, up 8.12% from the previous close.
-- **BNB (BNB):** Trading at $688.84, up 2.51% from the previous close.
-- **XRP (XRP):** Trading at $2.59, up 5.71% from the previous close.
-- **Cardano (ADA):** Trading at $0.7186, up 13.67% from the previous close.
-- **Dogecoin (DOGE):** Trading at $0.1974, up 8.34% from the previous close.
-- **Solana (SOL):** Trading at $164.31, up 3.55% from the previous close.
-- **Polkadot (DOT):** Trading at $3.97, up 7.88% from the previous close.
-- **Polygon (MATIC):** Trading at $0.2290, up 9.34% from the previous close.
-- **Litecoin (LTC):** Trading at $95.51, up 4.93% from the previous close.
-- **Bitcoin Cash (BCH):** Trading at $524.69, up 1.43% from the previous close.
-
-*Data sourced from real-time market feeds as of 13:23 UTC on July 11, 2025.*
+The market shows a mix of upward and downward movements among major cryptocurrencies. Notably, XRP and Cardano have experienced significant gains, while Solana and Litecoin have seen slight declines.
 
 **Overall Short-Term Trading Recommendations:**
 
-Given the current bullish trend, short-term traders might consider capitalizing on upward momentum. However, it's crucial to set tight stop-loss orders to mitigate potential volatility.
+Given the current market dynamics, traders should exercise caution. The mixed performance suggests potential volatility. It's advisable to monitor market trends closely and consider setting tight stop-loss orders to mitigate risks.
 
-**Specific Intraday Trading Ideas:**
+**Specific Short-Term Trading Ideas for Intraday (1-4h) Trades:**
 
-1. **Coin (Ticker):** Bitcoin (BTC)
+1. **Coin (Ticker):** XRP
    - **Direction:** Buy
-   - **Entry Price:** $118,144 (Source: Real-time market feed, 13:23 UTC, Exchange: Binance)
-   - **Stop-Loss:** $117,963 (0.15% below entry price)
-   - **Take-Profit:** $118,735 (0.50% above entry price)
+   - **Entry Price:** $2.80 (Source: Real-time data, July 12, 2025, 03:53:49 AM UTC)
+   - **Stop-Loss:** $2.77 (1% below entry price)
+   - **Take-Profit:** $2.86 (2% above entry price)
 
-2. **Coin (Ticker):** Ethereum (ETH)
+2. **Coin (Ticker):** Cardano (ADA)
    - **Direction:** Buy
-   - **Entry Price:** $3,011.32 (Source: Real-time market feed, 13:23 UTC, Exchange: Coinbase)
-   - **Stop-Loss:** $2,981.21 (1.00% below entry price)
-   - **Take-Profit:** $3,041.43 (1.00% above entry price)
+   - **Entry Price:** $0.7283 (Source: Real-time data, July 12, 2025, 03:53:49 AM UTC)
+   - **Stop-Loss:** $0.7210 (1% below entry price)
+   - **Take-Profit:** $0.7439 (2% above entry price)
 
-3. **Coin (Ticker):** Cardano (ADA)
-   - **Direction:** Buy
-   - **Entry Price:** $0.7186 (Source: Real-time market feed, 13:23 UTC, Exchange: Kraken)
-   - **Stop-Loss:** $0.7114 (1.00% below entry price)
-   - **Take-Profit:** $0.7258 (1.00% above entry price)
-
-*Note: All stop-loss levels are set within 1% of the entry price to manage risk effectively.*
+3. **Coin (Ticker):** Solana (SOL)
+   - **Direction:** Sell
+   - **Entry Price:** $163.11 (Source: Real-time data, July 12, 2025, 03:53:49 AM UTC)
+   - **Stop-Loss:** $164.74 (1% above entry price)
+   - **Take-Profit:** $159.85 (2% below entry price)
 
 **Sources Used:**
 
-- Real-time market data from Binance, Coinbase, and Kraken as of 13:23 UTC on July 11, 2025.
+- Real-time cryptocurrency price data as of July 12, 2025, 03:53:49 AM UTC.
 
-*Please ensure to verify all prices and market conditions before executing any trades, as cryptocurrency markets are highly volatile and subject to rapid changes.* 
+*Please note that cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider your risk tolerance before engaging in trading activities.* 
 [Report](https://dperov-org.github.io/pages/index.html)
 [Charts](https://dperov-org.github.io/pages/plot.html)
