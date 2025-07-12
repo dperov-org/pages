@@ -1,48 +1,51 @@
-** Дата: 12.07.2025 3:54
+** Дата: 12.07.2025 9:21
 
-As of July 12, 2025, at 03:53:49 AM UTC, the cryptocurrency market exhibits the following key metrics:
+As of July 12, 2025, at 09:20:53 AM (UTC), the cryptocurrency market exhibits mixed movements among major coins.
 
-- **Bitcoin (BTC):** Trading at $117,734, reflecting a 0.87% increase from the previous close.
-- **Ethereum (ETH):** Priced at $2,963.57, down 0.19% from the previous close.
-- **BNB (BNB):** At $694.90, up 0.72% from the previous close.
-- **XRP (XRP):** Trading at $2.80, an 8.95% increase from the previous close.
-- **Cardano (ADA):** Priced at $0.7283, up 6.06% from the previous close.
-- **Dogecoin (DOGE):** At $0.2038, a 2.94% increase from the previous close.
-- **Solana (SOL):** Trading at $163.11, down 1.06% from the previous close.
-- **Polkadot (DOT):** Priced at $3.99, up 1.79% from the previous close.
-- **Polygon (MATIC):** At $0.2324, a 3.31% increase from the previous close.
-- **Litecoin (LTC):** Trading at $94.84, down 0.59% from the previous close.
+**Current Market Overview:**
 
-The market shows a mix of upward and downward movements among major cryptocurrencies. Notably, XRP and Cardano have experienced significant gains, while Solana and Litecoin have seen slight declines.
+- **Bitcoin (BTC):** Trading at $117,983.00, down 0.11% from the previous close.
+- **Ethereum (ETH):** Priced at $2,968.21, a decrease of 1.40%.
+- **BNB (BNB):** At $692.39, up 0.56%.
+- **XRP (XRP):** Valued at $2.80, an increase of 8.11%.
+- **Cardano (ADA):** Trading at $0.722048, up 0.68%.
+- **Dogecoin (DOGE):** Priced at $0.200708, a rise of 1.70%.
+- **Solana (SOL):** At $162.38, down 0.87%.
+- **Polkadot (DOT):** Valued at $4.00, up 0.76%.
+- **Polygon (MATIC):** Trading at $0.233114, an increase of 1.81%.
+- **Litecoin (LTC):** Priced at $93.58, down 1.99%.
+- **Uniswap (UNI):** At $8.46, a decrease of 4.19%.
+
+*Data sourced from Investing.com, as of 09:20:53 AM (UTC).*
 
 **Overall Short-Term Trading Recommendations:**
 
-Given the current market dynamics, traders should exercise caution. The mixed performance suggests potential volatility. It's advisable to monitor market trends closely and consider setting tight stop-loss orders to mitigate risks.
+Given the current market volatility, traders should exercise caution. The mixed performance among major cryptocurrencies suggests a lack of clear directional momentum. It's advisable to monitor market developments closely and consider setting tight stop-loss orders to manage risk effectively.
 
-**Specific Short-Term Trading Ideas for Intraday (1-4h) Trades:**
+**Specific Short-Term Trading Ideas:**
 
-1. **Coin (Ticker):** XRP
+1. **Coin (Ticker):** XRP (XRP)
    - **Direction:** Buy
-   - **Entry Price:** $2.80 (Source: Real-time data, July 12, 2025, 03:53:49 AM UTC)
+   - **Entry Price:** $2.80 (Investing.com, 09:20:53 AM UTC)
    - **Stop-Loss:** $2.77 (1% below entry price)
-   - **Take-Profit:** $2.86 (2% above entry price)
+   - **Take-Profit:** $2.83 (1% above entry price)
 
-2. **Coin (Ticker):** Cardano (ADA)
+2. **Coin (Ticker):** Dogecoin (DOGE)
    - **Direction:** Buy
-   - **Entry Price:** $0.7283 (Source: Real-time data, July 12, 2025, 03:53:49 AM UTC)
-   - **Stop-Loss:** $0.7210 (1% below entry price)
-   - **Take-Profit:** $0.7439 (2% above entry price)
+   - **Entry Price:** $0.200708 (Investing.com, 09:20:53 AM UTC)
+   - **Stop-Loss:** $0.198701 (1% below entry price)
+   - **Take-Profit:** $0.202715 (1% above entry price)
 
-3. **Coin (Ticker):** Solana (SOL)
-   - **Direction:** Sell
-   - **Entry Price:** $163.11 (Source: Real-time data, July 12, 2025, 03:53:49 AM UTC)
-   - **Stop-Loss:** $164.74 (1% above entry price)
-   - **Take-Profit:** $159.85 (2% below entry price)
+3. **Coin (Ticker):** BNB (BNB)
+   - **Direction:** Buy
+   - **Entry Price:** $692.39 (Investing.com, 09:20:53 AM UTC)
+   - **Stop-Loss:** $685.47 (1% below entry price)
+   - **Take-Profit:** $699.31 (1% above entry price)
+
+*Note: All trading ideas are based on current market data and are intended for intraday (1-4 hour) trades. Traders should conduct their own research and consider their risk tolerance before executing any trades.*
 
 **Sources Used:**
 
-- Real-time cryptocurrency price data as of July 12, 2025, 03:53:49 AM UTC.
-
-*Please note that cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider your risk tolerance before engaging in trading activities.* 
+- Investing.com: Real-time cryptocurrency prices and market data. 
 [Report](https://dperov-org.github.io/pages/index.html)
 [Charts](https://dperov-org.github.io/pages/plot.html)
