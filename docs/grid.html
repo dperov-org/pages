@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compact AG Grid</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+  <style>
+    html, body, #myGrid { height: 100%; margin: 0; padding: 0;}
+    #myGrid { height: 600px; width: 98vw; margin: 20px auto;}
+    .ag-theme-alpine { font-size: 11px; }
+    .ag-theme-alpine .ag-cell, 
+    .ag-theme-alpine .ag-header-cell,
+    .ag-theme-alpine .ag-header-group-cell {
+      padding-left: 2px !important;
+      padding-right: 2px !important;
+      line-height: 1.2;
+    }
+    .ag-theme-alpine .ag-header-cell-label {
+      justify-content: center !important;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="h2-grid-title" style="text-align: center;">Grid</h2>  
+  <div id="myGrid" class="ag-theme-alpine"></div>
+  <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+  <script>
+    // Сокращённые заголовки и настройки ширины
+    const columnsShort = [
+      {headerName: 'S',  field: 'symbol', minWidth: 120, maxWidth: 150, pinned: 'left',
+        cellRenderer: (params) => {
+        const symbol = params.value;
+        const href1 = `https://dperov-org.github.io/pages/widgetpage.html#/${symbol}`;
+        const href2 = `https://dperov-org.github.io/pages/plot/${symbol}.png`;
+        return `
+          <a href="${href1}" target="_blank" style="color:#4169e1;text-decoration:none;">${symbol}</a>
+          &nbsp;
+          <a href="${href2}" target="_blank" title="Посмотреть график">📈</a>
+        `;
+      }},
+      {headerName: 'V24h', field: 'volume_24h', minWidth: 120, maxWidth: 150},
+      {headerName: 'rate', field: 'trade_rate', minWidth: 50, maxWidth: 60},
+      {headerName: 'B_rate', field: 'borrowable_rate', minWidth: 50, maxWidth: 60},
+      {headerName: 'Mx%', field: 'max_price_change_24h_pc', minWidth: 50, maxWidth: 56},
+      {headerName: '24h', field: 'price_change_24h', minWidth: 50, maxWidth: 50},
+      {headerName: '4h', field: 'price_change_4h', minWidth: 50, maxWidth: 60},
+      {headerName: '1h', field: 'price_change_1h', minWidth: 50, maxWidth: 60},
+      {headerName: '15m', field: 'price_change_15m', minWidth: 50, maxWidth: 60},
+      {headerName: 'low', field: 'level_low', minWidth: 80, maxWidth: 80},
+      {headerName: 'mid', field: 'level_center', minWidth: 80, maxWidth: 80},
+      {headerName: 'high', field: 'level_high', minWidth: 80, maxWidth: 80},
+      {headerName: 'ATR', field: 'ATR_pc', minWidth: 50, maxWidth: 60},
+      {headerName: 'BB', field: 'BB_signal', minWidth: 70, maxWidth: 80},
+      {headerName: 'MA', field: 'signal_ma_cross', minWidth: 50, maxWidth: 60},
+      {headerName: 'Lvl', field: 'signal_level', minWidth: 50, maxWidth: 60},
+      {headerName: 'ΔLvl', field: 'signal_level_change', minWidth: 50, maxWidth: 60},
+      {headerName: 'Nrm', field: 'fast_der_sm_norm', minWidth: 80, maxWidth: 100},
+    ];
+
+    fetch('https://dperov-org.github.io/pages/data/data.json')
+      .then(res => res.json()
+        .then(data => ({
+          data,
+          lastModified: res.headers.get('Last-Modified')
+        }))
+      )
+      .then(({data, lastModified}) => {
+        if (!Array.isArray(data) || data.length === 0) {
+          document.getElementById('myGrid').innerHTML = "<div style='text-align:center'>Нет данных</div>";
+          return;
+        }
+        let dateStr = lastModified ? new Date(lastModified).toLocaleString() : '';
+        if (dateStr) {
+          document.getElementById('h2-grid-title').textContent =
+            `Grid (Актуальность данных: ${dateStr})`;
+        }
+
+        const numericFields = [
+            'volume_24h', 'rate', 'max_price_change_24h_pc', 'price_change_24h', 'price_change_4h', 'price_change_1h', 'price_change_15m',
+            'low', 'mid', 'high',
+            'ATR_pc', 'signal_level', 'signal_level_change', 'fast_der_sm_norm', 'BB_signal'
+        ];
+
+        // Готовим колонки
+        const columnDefs = columnsShort.map(col => ({
+          ...col,
+          sortable: true,
+          filter: true, // без фильтров для компактности
+          floatingFilter: false,
+          cellClass: numericFields.includes(col.field) ? "ag-right-aligned-cell" : undefined,
+        }));
+
+        const gridOptions = {
+          columnDefs: columnDefs,
+          rowData: data,
+          suppressHorizontalScroll: false,
+          domLayout: 'autoHeight',
+          headerHeight: 23,
+          rowHeight: 22,
+          suppressMenuHide: true,
+          maintainColumnOrder: true,
+        };
+        agGrid.createGrid(document.getElementById('myGrid'), gridOptions);
+      })
+      .catch(err => {
+        document.getElementById('myGrid').innerHTML = "<div style='text-align:center;color:red'>Ошибка загрузки или чтения data.json</div>";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея на Glightbox + JSON</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0;}
+    #gallery { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px; }
+    #gallery a { display: block; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px #0001;}
+    #gallery img { width: 160px; height:100px; object-fit:cover; display: block; }
+  </style>
+</head>
+<body>
+  <h2>Галерея</h2>
+  <div id="gallery"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    async function buildGallery() {
+      const resp = await fetch('gallery.json');
+      const images = await resp.json();
+      const gallery = document.getElementById('gallery');
+      images.forEach(item => {
+        // data-gallery="gal" нужен для группы
+        const a = document.createElement('a');
+        a.href = item.full;
+        a.className = 'glightbox';
+        a.setAttribute('data-gallery', 'gal');
+        a.innerHTML = `<img src="${item.thumb}" alt="">`;
+        gallery.appendChild(a);
+      });
+      GLightbox({selector: '.glightbox'});
+    }
+    buildGallery();
+  </script>
+</body>
+</html>

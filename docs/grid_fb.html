@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Firestore → ag-Grid</title>
+  <!-- ag-Grid CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css">
+  <style>
+    html, body, #myGrid { height: 100%; width: 100vw; margin: 0; padding: 0; }
+    #myGrid { height: 90vh; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h3>Данные Firestore → ag-Grid</h3>
+  <div id="myGrid" class="ag-theme-alpine"></div>
+
+  <!-- Firebase JS SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <!-- AG-GRID JS - ВНИМАНИЕ: .min.js ! -->
+  <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA1hdWycyeqWWUtojJ9YvE7XNkbErZ-mxc",
+    authDomain: "fir-75d7e.firebaseapp.com",
+    databaseURL: "https://fir-75d7e-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "fir-75d7e",
+    storageBucket: "fir-75d7e.firebasestorage.app",
+    messagingSenderId: "107719455905",
+    appId: "1:107719455905:web:c1c6293ea886e507bcace0",
+    measurementId: "G-F1C8S5VJBJ"
+  };
+
+  // Инициализация Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const collectionName = "signals";
+
+  // Только фиксированные колонки
+  const columnDefs = [
+    {
+      headerName: 'Время',
+      field: 'time',
+      valueFormatter: ({ value }) => {
+        if (!value) return '';
+        let dateObj;
+        // Если это Firestore Timestamp
+        if (value.toDate) dateObj = value.toDate();
+        else dateObj = new Date(value);
+        const hours = dateObj.getHours().toString().padStart(2, '0');
+        const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+        return `${hours}:${minutes}`;
+        // Альтернативно через toLocaleTimeString:
+        // return dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      }
+    },
+    { headerName: 'Название', field: 'name' },
+    { headerName: 'Символ', field: 'symbol' }
+  ];
+
+  // Создаем сетку
+  const gridOptions = {
+    columnDefs,
+    rowData: [],
+    defaultColDef: { filter: true, sortable: true, resizable: true }
+  };
+
+  const gridDiv = document.getElementById('myGrid');
+  const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+
+  // Подписка на real-time обновления
+  db.collection(collectionName).onSnapshot(
+    (querySnapshot) => {
+      const rowData = [];
+      querySnapshot.forEach(doc => {
+        const data = doc.data();
+        data.id = doc.id; // если понадобится для key
+        rowData.push(data);
+      });
+      gridApi.setGridOption("rowData", rowData);
+    },
+    (error) => {
+      console.error("Ошибка подписки:", error);
+      gridApi.setGridOption("rowData", [{ error: "Ошибка загрузки данных" }]);
+    }
+  );
+</script>
+</body>
+</html>
