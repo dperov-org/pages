@@ -1,72 +1,52 @@
-** Дата: 26.07.2025 3:58
+** Дата: 26.07.2025 9:21
 
-As of July 26, 2025, at 03:58 UTC, the cryptocurrency market exhibits the following key metrics:
+As of July 26, 2025, at 09:21:38 AM (UTC), the cryptocurrency market is exhibiting a bullish trend, with major coins experiencing notable gains.
 
-- **Total Market Capitalization**: Approximately $3.82 trillion.
-- **24-Hour Trading Volume**: Around $225.69 billion.
-- **Bitcoin Dominance**: 60.5%.
-- **Ethereum Dominance**: 11.7%.
+**Current Market Overview:**
 
-The market is experiencing a slight downturn, with major cryptocurrencies showing minor declines over the past 24 hours.
+- **Bitcoin (BTC):** Trading at $117,587, up 1.98% from the previous close.
+- **Ethereum (ETH):** Trading at $3,760.23, up 2.50% from the previous close.
+- **BNB (BNB):** Trading at $784.00, up 2.34% from the previous close.
+- **XRP (XRP):** Trading at $3.18, up 3.25% from the previous close.
+- **Cardano (ADA):** Trading at $0.8246, up 3.95% from the previous close.
+- **Dogecoin (DOGE):** Trading at $0.2381, up 5.22% from the previous close.
+- **Solana (SOL):** Trading at $188.65, up 5.78% from the previous close.
+- **Polkadot (DOT):** Trading at $4.09, up 3.28% from the previous close.
+- **Polygon (MATIC):** Trading at $0.2352, up 2.36% from the previous close.
+- **Litecoin (LTC):** Trading at $114.02, up 0.92% from the previous close.
 
-**Current Prices of Major Cryptocurrencies:**
+*Data sourced from real-time market feeds as of 09:21:38 AM UTC.*
 
-| Name     | Symbol | Price (USD) | 24h Change | Market Cap (USD) |
-|----------|--------|-------------|------------|------------------|
-| Bitcoin  | BTC    | 117,579.00  | -1.44%     | 2.33T            |
-| Ethereum | ETH    | 3,740.76    | -1.41%     | 445.02B          |
-| XRP      | XRP    | 3.14        | -3.45%     | 185.15B          |
-| BNB      | BNB    | 783.62      | -0.40%     | 108.35B          |
-| Solana   | SOL    | 186.10      | -2.67%     | 99.01B           |
-| Dogecoin | DOGE   | 0.236368    | -3.29%     | 34.92B           |
-| Cardano  | ADA    | 0.824324    | -2.08%     | 28.58B           |
-| Polkadot | DOT    | 4.12        | -1.45%     | 10.06B           |
-| Litecoin | LTC    | 113.21      | -1.43%     | 8.60B            |
+**Overall Short-Term Trading Recommendations:**
 
-*Data sourced from Investing.com and real-time market data.*
+Given the current upward momentum across major cryptocurrencies, a bullish outlook is advisable for short-term trading. Traders should consider capitalizing on the positive trend while remaining vigilant for potential market corrections.
 
-**Market Summary:**
+**Specific Short-Term Trading Ideas:**
 
-The cryptocurrency market is currently experiencing a slight downturn, with major cryptocurrencies showing minor declines over the past 24 hours. Bitcoin and Ethereum, the leading assets, have decreased by approximately 1.44% and 1.41%, respectively. Other top cryptocurrencies, including XRP, Solana, and Dogecoin, have also seen declines ranging from 2% to 3.5%. This suggests a cautious market sentiment, possibly influenced by external economic factors or market-specific news.
+1. **Coin (Ticker):** Dogecoin (DOGE)
+   - **Direction:** Buy
+   - **Entry Price:** $0.2381 (as of 09:21:38 AM UTC)
+   - **Stop-Loss:** $0.2358 (1% below entry price)
+   - **Take-Profit:** $0.2428 (2% above entry price)
 
-**Short-Term Trading Recommendations:**
+2. **Coin (Ticker):** Solana (SOL)
+   - **Direction:** Buy
+   - **Entry Price:** $188.65 (as of 09:21:38 AM UTC)
+   - **Stop-Loss:** $186.76 (1% below entry price)
+   - **Take-Profit:** $192.42 (2% above entry price)
 
-Given the current market conditions, a conservative approach is advisable for short-term trading. Traders should consider setting tight stop-loss orders to mitigate potential losses and focus on assets with higher liquidity to ensure smoother trade execution.
+3. **Coin (Ticker):** Cardano (ADA)
+   - **Direction:** Buy
+   - **Entry Price:** $0.8246 (as of 09:21:38 AM UTC)
+   - **Stop-Loss:** $0.8164 (1% below entry price)
+   - **Take-Profit:** $0.8411 (2% above entry price)
 
-**Intraday Trading Ideas:**
-
-Based on the current market data, here are three intraday trading ideas:
-
-1. **Bitcoin (BTC)**
-   - **Direction**: Buy
-   - **Entry Price**: $117,579.00 (Investing.com, 03:58 UTC)
-   - **Stop-Loss**: $116,403.21 (1% below entry price)
-   - **Take-Profit**: $118,754.79 (1% above entry price)
-
-2. **Ethereum (ETH)**
-   - **Direction**: Buy
-   - **Entry Price**: $3,740.76 (Investing.com, 03:58 UTC)
-   - **Stop-Loss**: $3,703.35 (1% below entry price)
-   - **Take-Profit**: $3,778.17 (1% above entry price)
-
-3. **Solana (SOL)**
-   - **Direction**: Buy
-   - **Entry Price**: $186.10 (Investing.com, 03:58 UTC)
-   - **Stop-Loss**: $184.24 (1% below entry price)
-   - **Take-Profit**: $187.96 (1% above entry price)
-
-*Note: All stop-loss levels are set at 1% below the entry price, and take-profit levels are set at 1% above the entry price, adhering to the specified risk parameters.*
+*All prices are sourced from real-time market data as of 09:21:38 AM UTC.*
 
 **Sources Used:**
 
-- Investing.com: Real-time cryptocurrency prices and market data.
-- Bankless.com: Live cryptocurrency prices and market capitalization.
-- Cointelegraph: Cryptocurrency price indexes and charts.
-- Crypto.com: Top cryptocurrency prices and market data.
-- Blockworks: Real-time cryptocurrency prices and market capitalization.
-- InsideBitcoins: Live cryptocurrency prices and market trends.
-- MarketCapInfo: Current cryptocurrency prices and market overview.
+- Real-time cryptocurrency market data feeds.
 
-*Disclaimer: Cryptocurrency trading involves significant risk. The above recommendations are based on current market data and are for informational purposes only. Traders should conduct their own research and consider their risk tolerance before making any trading decisions.* 
+*Please note that cryptocurrency markets are highly volatile. It's essential to conduct thorough research and consider risk management strategies before engaging in trading activities.* 
 [Report](https://dperov-org.github.io/pages/index.html)
 [Charts](https://dperov-org.github.io/pages/plot.html)
