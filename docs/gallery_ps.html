@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея на PhotoSwipe + JSON</title>
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+    <style>
+        body { font-family: sans-serif;}
+        #gallery { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px; }
+        #gallery a { display: block; border-radius: 4px; overflow: hidden; }
+        #gallery img { width: 160px; height: 100px; object-fit: cover; display: block; }
+    </style>
+</head>
+<body>
+    <h2>Галерея</h2>
+    <div id="gallery"></div>
+
+    <!-- PhotoSwipe Core & UI -->
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+
+        async function initGallery() {
+            // Загружаем json-файл
+            const resp = await fetch('gallery.json');
+            const data = await resp.json();
+            const galleryDiv = document.getElementById('gallery');
+            // Рендерим миниатюры через <a><img>
+            data.forEach((img, i) => {
+                const a = document.createElement('a');
+                a.href = img.full;
+                a.setAttribute('data-pswp-width', img.w);
+                a.setAttribute('data-pswp-height', img.h);
+                if (img.title) a.setAttribute('data-pswp-title', img.title);
+                a.setAttribute('data-pswp-index', i);
+                a.className = 'gal-thumb';
+                a.innerHTML = `<img src="${img.thumb}" alt="${img.title || ''}">`;
+                galleryDiv.appendChild(a);
+            });
+
+            // Инициализация PhotoSwipe
+            const lightbox = new PhotoSwipeLightbox({
+                gallery: '#gallery',
+                children: 'a',
+                pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js'),
+                showHideAnimationType: 'zoom' // красиво раскрывается
+            });
+            lightbox.init();
+        }
+        initGallery();
+    </script>
+</body>
+</html>

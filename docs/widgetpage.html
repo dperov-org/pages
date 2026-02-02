@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>TradingView Flexible Minimal</title>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { 
+      min-height: 100vh; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    #current-url {
+      margin: 30px 0 10px 0;
+      font-size: 1.1em;
+      color: #0066cc;
+      font-family: monospace;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div id="current-url"></div>
+  <div id="tv_container" style="width:1600px; height:800px"></div>
+  <script>
+    // Значения по умолчанию
+    const DEFAULT_SYMBOL = "BTCUSDT";
+    const DEFAULT_INTERVAL = "5";
+    const DEFAULT_EXCHANGE = "BYBIT";
+
+    // Парсим hash
+    function parseHash() {
+      // hash вида: #/SYMBOL/INTERVAL/EXCHANGE
+      if (!window.location.hash.startsWith("#/")) 
+        return {
+          symbol: DEFAULT_SYMBOL, 
+          interval: DEFAULT_INTERVAL, 
+          exchange: DEFAULT_EXCHANGE
+        };
+      const parts = window.location.hash.substr(2).split("/").map(decodeURIComponent);
+
+      const symbol = parts[0] && parts[0].length > 0 ? parts[0].toUpperCase() : DEFAULT_SYMBOL;
+      const interval = (parts.length > 1 && parts[1]) ? parts[1] : DEFAULT_INTERVAL;
+      const exchange = (parts.length > 2 && parts[2]) ? parts[2].toUpperCase() : DEFAULT_EXCHANGE;
+
+      return { symbol, interval, exchange };
+    }
+
+    // Создаём ссылку
+    function getHashUrl(symbol, interval, exchange) {
+      const {origin, pathname} = window.location;
+      let url = `${origin}${pathname}#/` + encodeURIComponent(symbol);
+      // Только символ: /#/ETHUSDT
+      // Символ + таймфрейм: /#/ETHUSDT/15
+      // Все параметры: /#/ETHUSDT/15/OKX
+      if (interval !== DEFAULT_INTERVAL || exchange !== DEFAULT_EXCHANGE) {
+        url += "/" + encodeURIComponent(interval);
+        if (exchange !== DEFAULT_EXCHANGE)
+          url += "/" + encodeURIComponent(exchange);
+      }
+      return url;
+    }
+
+    let currentWidget = null;
+
+    function updatePage() {
+      const {symbol, interval, exchange} = parseHash();
+
+      const tvSymbol = `${exchange}:${symbol}`;
+
+      // Точно такой же формат url как и в хэше
+      let url = `${window.location.origin}${window.location.pathname}#/` + encodeURIComponent(symbol);
+      if (interval !== DEFAULT_INTERVAL || exchange !== DEFAULT_EXCHANGE) {
+        url += "/" + encodeURIComponent(interval);
+        if (exchange !== DEFAULT_EXCHANGE)
+          url += "/" + encodeURIComponent(exchange);
+      }
+
+      document.getElementById('current-url').innerText = url;
+
+      // Удаляем старый виджет, если есть
+      if (currentWidget && currentWidget.remove) {
+        currentWidget.remove();
+        document.getElementById("tv_container").innerHTML = '';
+      }
+
+      // Инициализация TradingView
+      currentWidget = new TradingView.widget({
+        "container_id": "tv_container",
+        "width": 1600,
+        "height": 800,
+        "symbol": tvSymbol,
+        "interval": interval,
+        "timezone": "Etc/UTC",
+        "theme": "light",
+        "style": "1",
+        "locale": "ru",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true
+      });
+    }
+
+    window.addEventListener('hashchange', updatePage);
+    window.addEventListener('DOMContentLoaded', updatePage);
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AG Grid in Markdown</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css" />
+  <style>
+    html, body {
+      margin:0; padding:0; background:#fafafa;
+      width:100vw; min-width:700px;
+    }
+    body {
+      max-width: 100vw; margin:2em 0 2em 0; font-family: sans-serif;
+      overflow-x: auto;
+    }
+    h1, h2, h3 { font-family: inherit; }
+    ul, ol { margin-bottom:1em; }
+    .ag-theme-alpine {
+      width: 100vw !important;
+      min-width: 400px;
+    }
+    @media (min-width:1200px) {
+      .ag-theme-alpine { max-width: 1200px; }
+    }
+  </style>
+</head>
+<body>
+<h1>🚦 Торговые сигналы</h1>
+<p>Актуальные сигналы на рынке (UTC: `2026-02-02 05:52`)</p>
+<div id="aggrid_0" class="ag-theme-alpine" style="height: 300px; width: 100vw; margin:1em 0;"></div>
+<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+<script>
+  
+            agGrid.createGrid(document.getElementById('aggrid_0'), {
+              columnDefs: [{'headerName': 'symbol', 'field': 'symbol', 'width': 100}, {'headerName': 'name', 'field': 'name', 'width': 100}, {'headerName': 'price', 'field': 'price', 'width': 100}, {'headerName': 'low', 'field': 'low', 'width': 100}, {'headerName': 'center', 'field': 'center', 'width': 100}, {'headerName': 'high', 'field': 'high', 'width': 100}, {'headerName': 'tp', 'field': 'tp', 'width': 100}, {'headerName': 'sl', 'field': 'sl', 'width': 100}, {'headerName': 'time', 'field': 'time', 'width': 100}, {'headerName': 'url', 'field': 'url', 'width': 100}],
+              rowData: [{'symbol': 'MNTUSDT', 'name': 'On Low', 'price': '0.6786', 'low': '0.678', 'center': '0.6931', 'high': '0.7123', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[MNTUSDT](https://dperov-org.github.io/pages/plot/MNTUSDT.png)'}, {'symbol': 'SUIUSDT', 'name': 'On Low', 'price': '1.0811', 'low': '1.0821', 'center': '1.1102', 'high': '1.1423', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[SUIUSDT](https://dperov-org.github.io/pages/plot/SUIUSDT.png)'}, {'symbol': 'PEPEUSDT', 'name': 'On Low', 'price': '0', 'low': '0', 'center': '0', 'high': '0', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[PEPEUSDT](https://dperov-org.github.io/pages/plot/PEPEUSDT.png)'}, {'symbol': 'BONKUSDT', 'name': 'On Low', 'price': '0', 'low': '0', 'center': '0', 'high': '0', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[BONKUSDT](https://dperov-org.github.io/pages/plot/BONKUSDT.png)'}, {'symbol': 'ALGOUSDT', 'name': 'On Low', 'price': '0.1004', 'low': '0.1004', 'center': '0.102', 'high': '0.1044', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[ALGOUSDT](https://dperov-org.github.io/pages/plot/ALGOUSDT.png)'}, {'symbol': 'AAVEUSDT', 'name': 'On Low', 'price': '122.67', 'low': '122.732', 'center': '124.726', 'high': '126.314', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[AAVEUSDT](https://dperov-org.github.io/pages/plot/AAVEUSDT.png)'}, {'symbol': 'POPCATUSDT', 'name': 'On Low', 'price': '0.0538', 'low': '0.0538', 'center': '0.0552', 'high': '0.0566', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[POPCATUSDT](https://dperov-org.github.io/pages/plot/POPCATUSDT.png)'}, {'symbol': 'JASMYUSDT', 'name': 'On Low', 'price': '0.0057', 'low': '0.0057', 'center': '0.0058', 'high': '0.0059', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[JASMYUSDT](https://dperov-org.github.io/pages/plot/JASMYUSDT.png)'}, {'symbol': 'SUSDT', 'name': 'On Low', 'price': '0.0494', 'low': '0.0493', 'center': '0.0503', 'high': '0.0511', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[SUSDT](https://dperov-org.github.io/pages/plot/SUSDT.png)'}, {'symbol': 'CRVUSDT', 'name': 'On Low', 'price': '0.2728', 'low': '0.2731', 'center': '0.2805', 'high': '0.2891', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[CRVUSDT](https://dperov-org.github.io/pages/plot/CRVUSDT.png)'}, {'symbol': 'WLDUSDT', 'name': 'Low-&gt;Center', 'price': '0.3916', 'low': '0.3914', 'center': '0.3993', 'high': '0.4079', 'tp': '0.3993', 'sl': '0.3914', 'time': '2026-02-02 05:45:00+00:00', 'url': '[WLDUSDT](https://dperov-org.github.io/pages/plot/WLDUSDT.png)'}, {'symbol': 'SOLUSDT', 'name': 'Low-&gt;Lower', 'price': '98.2', 'low': '98.3857', 'center': '101.526', 'high': '104.815', 'tp': '95.245', 'sl': '98.3857', 'time': '2026-02-02 05:45:00+00:00', 'url': '[SOLUSDT](https://dperov-org.github.io/pages/plot/SOLUSDT.png)'}, {'symbol': 'XRPUSDT', 'name': '3 red', 'price': '1.5471', 'low': '1.5527', 'center': '1.597', 'high': '1.6526', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[XRPUSDT](https://dperov-org.github.io/pages/plot/XRPUSDT.png)'}, {'symbol': 'SOLUSDT', 'name': '3 red', 'price': '98.2', 'low': '98.3857', 'center': '101.526', 'high': '104.815', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[SOLUSDT](https://dperov-org.github.io/pages/plot/SOLUSDT.png)'}, {'symbol': 'PENGUUSDT', 'name': '3 red', 'price': '0.0074', 'low': '0.0075', 'center': '0.0077', 'high': '0.0079', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[PENGUUSDT](https://dperov-org.github.io/pages/plot/PENGUUSDT.png)'}, {'symbol': 'SUIUSDT', 'name': '3 red', 'price': '1.0811', 'low': '1.0821', 'center': '1.1102', 'high': '1.1423', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[SUIUSDT](https://dperov-org.github.io/pages/plot/SUIUSDT.png)'}, {'symbol': 'DOGEUSDT', 'name': '3 red', 'price': '0.1008', 'low': '0.1011', 'center': '0.1037', 'high': '0.1054', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[DOGEUSDT](https://dperov-org.github.io/pages/plot/DOGEUSDT.png)'}, {'symbol': 'ADAUSDT', 'name': '3 red', 'price': '0.2791', 'low': '0.2802', 'center': '0.2881', 'high': '0.2947', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[ADAUSDT](https://dperov-org.github.io/pages/plot/ADAUSDT.png)'}, {'symbol': 'ALGOUSDT', 'name': '3 red', 'price': '0.1004', 'low': '0.1004', 'center': '0.102', 'high': '0.1044', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[ALGOUSDT](https://dperov-org.github.io/pages/plot/ALGOUSDT.png)'}, {'symbol': 'WIFUSDT', 'name': '3 red', 'price': '0.2444', 'low': '0.2449', 'center': '0.2506', 'high': '0.2574', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[WIFUSDT](https://dperov-org.github.io/pages/plot/WIFUSDT.png)'}, {'symbol': 'ENAUSDT', 'name': '3 red', 'price': '0.1337', 'low': '0.1341', 'center': '0.1367', 'high': '0.1391', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[ENAUSDT](https://dperov-org.github.io/pages/plot/ENAUSDT.png)'}, {'symbol': 'LINKUSDT', 'name': '3 red', 'price': '9.17', 'low': '9.2127', 'center': '9.5104', 'high': '9.8704', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[LINKUSDT](https://dperov-org.github.io/pages/plot/LINKUSDT.png)'}, {'symbol': 'XDCUSDT', 'name': '3 red', 'price': '0.0355', 'low': '0.034', 'center': '0.0349', 'high': '0.0362', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[XDCUSDT](https://dperov-org.github.io/pages/plot/XDCUSDT.png)'}, {'symbol': 'DOTUSDT', 'name': '3 red', 'price': '1.47', 'low': '1.471', 'center': '1.5036', 'high': '1.5386', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[DOTUSDT](https://dperov-org.github.io/pages/plot/DOTUSDT.png)'}, {'symbol': 'JASMYUSDT', 'name': '3 red', 'price': '0.0057', 'low': '0.0057', 'center': '0.0058', 'high': '0.0059', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[JASMYUSDT](https://dperov-org.github.io/pages/plot/JASMYUSDT.png)'}, {'symbol': 'SAFEUSDT', 'name': '3 red', 'price': '0.1168', 'low': '0.1213', 'center': '0.1248', 'high': '0.1281', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[SAFEUSDT](https://dperov-org.github.io/pages/plot/SAFEUSDT.png)'}, {'symbol': 'OPUSDT', 'name': '3 red', 'price': '0.2241', 'low': '0.226', 'center': '0.2314', 'high': '0.2383', 'tp': '0', 'sl': '0', 'time': '2026-02-02 05:45:00+00:00', 'url': '[OPUSDT](https://dperov-org.github.io/pages/plot/OPUSDT.png)'}],
+              domLayout: 'autoHeight'
+            });
+            
+</script>
+</body>
+</html>
